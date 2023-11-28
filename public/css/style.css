@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Isso garante que a altura da tela seja coberta pelo contêiner principal */
+    margin: 0; /* Remove as margens padrão do corpo */
+}
+#chat{
+    max-width: 100%;
+    min-height: 500px;
+    max-height: 500px; /* Adicionando esta linha para definir a altura máxima */
+    background-color: aliceblue;
+    overflow-y: scroll;
+}
+#username, #msg, .btn-primary {
+    margin-bottom: 10px;
+}
