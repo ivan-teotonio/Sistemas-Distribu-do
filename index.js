@@ -32,12 +32,12 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+app.use(express.static(path.join(__dirname, 'public'), { 'Content-Type': 'text/css' }));
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
 const PORT = process.env.PORT || 3001;
-const HOST = process.env.HOST || '192.168.10.10';  // Alterado para '0.0.0.0' para ouvir em todos os endereços
-
+const HOST = process.env.HOST || '192.168.10.8';  
 // Abrir evento de conexão
 io.on("connection", (socket) => {
     socket.on("disconnect", () => {
